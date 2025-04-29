@@ -1,62 +1,78 @@
 //alert('Hello, World');
 console.log('hi');
 
-//змінні
-/*let userName = 'test';
-console.log('userName :>> ', userName);
-console.log(1,2,3);
-userName = 13;
-console.log(userName);
+// Змінні
+let a = 10;
+let b = 2;
+let mult = a * b;
+console.log(mult);
 
-const constValue = 10;
-console.log(constValue);
-
-var anyValue = 7;
-console.log(anyValue);
-
-const bigintValue = 222222222222n;
-console.log(bigintValue);
-
-const isMarry = true;
-console.log(isMarry);
-
-const nullValue = null;
-console.log(nullValue);
-
-console.log('tyoeof 10:', typeof 10);
-console.log('typeof anyValue:', typeof anyValue);
-
-console.log('11n:', typeof 11n);
-console.log('"11":', typeof "11");
-console.log('true:', typeof true);
-console.log('"true":', typeof "true");
-console.log('null:', typeof null);
-console.log(typeof objValue);
-
-const userFirstName = "Sasha";
-let userOld = 37;
-console.log(userFirstName, userOld);
-console.log('userFirstName:', typeof userFirstName);
-console.log('userOld:', typeof userOld);
-console.log(typeof null);
-
-const greeting = "You are ";
-const age = prompt("How old are you?");
-console.log(age);
-console.log(greeting + age + " years old");
-
-let b = 10;
-b += 22;
-console.log(b);
-*/
-
-let c = +prompt('Add first numder:');
-let d = +prompt('Add second number:');
-let summa = c + d;
-console.log(summa);
-
+let c = 33;
+let d = 3;
 let dil = c / d;
 console.log(dil);
+
+let e = 11;
+let f = 22;
+let sum = e + f;
+console.log(sum);
+
+console.log('type 11: ', typeof 11);
+console.log('type true: ', typeof true);
+console.log('type "java script": ', typeof "java script");
+console.log('type "100": ', typeof "100");
+let g = "100";
+let g1 = Number("100");
+console.log('type new 100: ', typeof g1);
+
+let num = 1;
+num += 11;
+console.log('num=num+11 ', num);
+
+num -= 11;
+console.log('num=num-11 ', num);
+
+num *= 11;
+console.log('num=num*11 ', num);
+
+num /= 11;
+console.log('num=num/11 ', num);
+
+num++
+console.log('num=num+1 ', num);
+
+num--
+console.log('num=num-1 ', num);
+
+//введення/виведення
+
+/*let age = prompt('How old are you?');
+let answer = age ** 2;
+console.log('number**2= ', answer);
+
+let firstNumber = +prompt('Add first number.');
+let secondNumber = +prompt('Add second number.');
+let answerQue = (firstNumber + secondNumber) / 2;
+console.log('Seredne= ', answerQue);
+
+let m = prompt('Add minutes.');
+let s = m * 60;
+console.log('seconds ', s);*/
+
+const greeting = 'Hello,';
+let userName = prompt('Name?');
+console.log(greeting, userName, '!');
+
+
+
+
+
+
+
+
+
+
+
 
 
 
