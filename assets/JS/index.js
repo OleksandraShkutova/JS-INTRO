@@ -1,7 +1,7 @@
-//alert('Hello, World');
+/*alert('Hello, World');
 console.log('hi');
 
-// Змінні
+ Змінні
 let a = 10;
 let b = 2;
 let mult = a * b;
@@ -44,9 +44,9 @@ console.log('num=num+1 ', num);
 num--
 console.log('num=num-1 ', num);
 
-//введення/виведення
+введення/виведення
 
-/*let age = prompt('How old are you?');
+let age = prompt('How old are you?');
 let answer = age ** 2;
 console.log('number**2= ', answer);
 
