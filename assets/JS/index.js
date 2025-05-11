@@ -1,68 +1,43 @@
-/*alert('Hello, World');
-console.log('hi');
 
- Змінні
-let a = 10;
-let b = 2;
-let mult = a * b;
-console.log(mult);
+/*const a = Number (prompt ('Введіть перше число'));
+const b = Number (prompt ('Введіть друге число'));
+let c = prompt ('Введіть дію "+" або "-"');
+if (c === "+") {
+    console.log('Сума чисел = ', a + b);
+} else {
+    console.log('Різниця чисел = ', a - b);
+}
 
-let c = 33;
-let d = 3;
-let dil = c / d;
-console.log(dil);
+let age = Number(prompt('How old are you?'));
+if (age < 18) {
+    console.log('Sorry! Demo version!');
+} 
+console.log('Hello! Welcom to acount!');
 
-let e = 11;
-let f = 22;
-let sum = e + f;
-console.log(sum);
 
-console.log('type 11: ', typeof 11);
-console.log('type true: ', typeof true);
-console.log('type "java script": ', typeof "java script");
-console.log('type "100": ', typeof "100");
-let g = "100";
-let g1 = Number("100");
-console.log('type new 100: ', typeof g1);
+let a = Number (prompt ('Введіть перше число'));
+let b = Number (prompt ('Введіть друге число'));
+let c = prompt ('Введіть дію');
+if (c === "+") {
+    console.log('Сума чисел =', a + b);
+} else if (c === '*') {
+    console.log('Добуток чисел =', a * b);
+} else if(c === '-') {
+    console.log('Різниця чисел =', a - b );
+} else {
+    console.log('Ділення чисел =', a / b);
+}
 
-let num = 1;
-num += 11;
-console.log('num=num+11 ', num);
+let day = 'friday';
+let data = 13;
+if (day === 'friday' && data === 13) {
+    console.log('Congretuletions, you have discont!');
+}*/
 
-num -= 11;
-console.log('num=num-11 ', num);
-
-num *= 11;
-console.log('num=num*11 ', num);
-
-num /= 11;
-console.log('num=num/11 ', num);
-
-num++
-console.log('num=num+1 ', num);
-
-num--
-console.log('num=num-1 ', num);
-
-введення/виведення
-
-let age = prompt('How old are you?');
-let answer = age ** 2;
-console.log('number**2= ', answer);
-
-let firstNumber = +prompt('Add first number.');
-let secondNumber = +prompt('Add second number.');
-let answerQue = (firstNumber + secondNumber) / 2;
-console.log('Seredne= ', answerQue);
-
-let m = prompt('Add minutes.');
-let s = m * 60;
-console.log('seconds ', s);*/
-
-const greeting = 'Hello,';
-let userName = prompt('Name?');
-console.log(greeting, userName, '!');
-
+let isAdualt = false;
+if (!isAdualt) {
+    console.log('Вітаю! Ви неповнолітній. Демо доступ.');
+}
 
 
 
