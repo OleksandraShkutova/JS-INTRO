@@ -8,18 +8,18 @@ if (isDay) {
 let isOnline = false;
 if (!isOnline) {
     console.log('Ваше повідомлення буде відправлено, коли буде інтернет');
-}
+}*/
 
 let summ = Number(prompt('Введіть суму покупки  '));
 if (summ < 500) {
     console.log('Сума покупки = ', summ);
+} if (summ < 800 && summ >= 500 ) {
+    console.log('Сума покупки = ', summ * 0.97);
 } if (summ >= 800) {
-    console.log('Сума покупки = ', summ * 0.95);
-} else {
-    console.log('Сума покупки = ', summ * 0.97 );
+    console.log('Сума покупки = ', summ * 0.95 );
 }
 
-let day = +prompt('Введіть день тижня');
+/*let day = +prompt('Введіть день тижня');
 switch (day) {
     case 1:
         console.log('Понеділок');
@@ -44,7 +44,7 @@ switch (day) {
         break;       
     default:
         console.log('Такого дня не існує!');
-} */
+} 
 
 
 let day = +prompt('Введіть день місяця');
@@ -88,7 +88,7 @@ switch (day) {
         break;       
     default:
         console.log('Не може бути!');
-} 
+} */
 
 
 
