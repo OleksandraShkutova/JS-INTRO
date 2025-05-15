@@ -1,58 +1,52 @@
 
-/*let a = 1;
-let b = +prompt('Скільки сторінок?');
-while (a <= b) {
-    if (a % 2 === 0){
-        console.log('Номер сторінки:', a);
-    }
-    a = a + 1;
+/*let a = 25;
+while (a>=0) {
+    console.log(a--);
+} 
+
+let b = 10;
+while (b <= 50) {
+    console.log(b);
+    b += 5;
 }
 
-let i = 1;
-let summ = 0;
-while(i <= 5){
-    summ = summ + i;
-    i = i + 1;
+let c = 1;
+let sum = 0;
+while (c <= 100) {
+    sum += c++;
 }
-console.log(summ);
+console.log(sum); 
 
-let i = 1;
-let mult = 1;
-while(i <= 5) {
-    if (i % 2 === 0){
-      mult = mult * i;  
-    }
-    i = i + 1;
+let d = 25;
+do {
+    console.log(d--);
+} while (d >= 0)
+
+let e = 10;
+do {
+    console.log(e);
+    e += 5;
+} while (e <= 50)
+
+let f = 1;
+sum = 0;
+do {
+    sum += f++;
+} while (f <= 100);
+console.log(sum);
+*/
+
+for(let r = 25; r >= 0; r--) {
+    console.log(r);
 }
-console.log(mult);
 
-let i = 1;
-let mult = 1;
-while(i <= 5) {
-    mult = mult * i;  
-    i++
-}
-console.log(mult);
-
-for ( let i = 10; i <= 100; i = i + 10){
-    console.log(i);
+for(let g = 10; g <= 50; g += 5){
+    console.log(g);
 }
 
 let sum = 0;
-for ( let i = 3; i <= 11; i = i + 2){
-    sum = sum + i;
+for(let s = 1; s <= 100; s++){
+    sum += s;
 }
-
-console.log(sum / 5);
-
-let d = 1;
-for (let i = 10; i >= -5; i = i - 1){
-    d = d * i;
-}
-console.log(d);
-
-let greeting = 'Hello';
-let userName = prompt('Username?');
-console.log(`${greeting}, ${userName}!`);*/
-
+console.log(sum);
 
