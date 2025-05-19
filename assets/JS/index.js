@@ -1,52 +1,85 @@
 
-/*let a = 25;
-while (a>=0) {
-    console.log(a--);
-} 
+/*function sum(a, b) {
+    return a + b;
+}
+let result = sum (7, 13);
+console.log(result);
 
-let b = 10;
-while (b <= 50) {
-    console.log(b);
-    b += 5;
+
+
+function c(a, b) {
+    return a**b;
+}
+let result = c(2, 2);
+console.log(result);
+
+let result1 = c(3, 4);
+console.log(result1);
+
+function sumAll(a, b){
+    let sum = 0;
+    for(let i = a; i <= b; i++ ){
+      sum += i;  
+    }
+    return sum;
+}
+console.log(sumAll(7,10));
+
+
+function isAge(age){
+    if(age >= 18) {
+         return true;
+    } else {
+        return false;
+    }
 }
 
-let c = 1;
-let sum = 0;
-while (c <= 100) {
-    sum += c++;
+function isAge(age){
+    return age >= 18 ? true: false;
 }
-console.log(sum); 
 
-let d = 25;
-do {
-    console.log(d--);
-} while (d >= 0)
+console.log(isAge(16));
+console.log(isAge(18));
+console.log(isAge(25));
 
-let e = 10;
-do {
-    console.log(e);
-    e += 5;
-} while (e <= 50)
 
-let f = 1;
-sum = 0;
-do {
-    sum += f++;
-} while (f <= 100);
-console.log(sum);
+function isAge(age){
+    return age >= 18;
+}
+console.log(isAge(20));
+
+let c = function(a, b) {
+    return a**b;
+}
+console.log(c(2, 2));
 */
 
-for(let r = 25; r >= 0; r--) {
-    console.log(r);
-}
+/**
+ * Calc sum of all given numbers
+ * @param {number} d - first number
+ * @param {number} [c = 1] - second number
+ * @returns sum all number
+ */
 
-for(let g = 10; g <= 50; g += 5){
-    console.log(g);
+function sumAll(d, c = 1) {
+    let sum = 0;
+    for(let i = c; i <= d; i++ ){
+      sum += i;  
+    }
+    return sum;
 }
+console.log(sumAll(5));
+console.log(sumAll(5, 1));
 
-let sum = 0;
-for(let s = 1; s <= 100; s++){
-    sum += s;
+/**
+ * Calc sum of two numbers
+ * @param {number} a - first number
+ * @param {number} b - second number
+ * @returns sum two numbers
+ */
+function sum(a, b) {
+    return a + b;
 }
-console.log(sum);
+let result = sum (7, 13);
+console.log(result);
 
