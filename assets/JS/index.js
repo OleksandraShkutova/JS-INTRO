@@ -1,85 +1,40 @@
 
-/*function sum(a, b) {
-    return a + b;
+// 1
+function isWorkingAgePerson(age){
+    return age >= 20 && age < 88;
 }
-let result = sum (7, 13);
-console.log(result);
+console.log(isWorkingAgePerson(20));
+console.log(isWorkingAgePerson(4));
+console.log(isWorkingAgePerson(88));
+console.log(isWorkingAgePerson(66));
 
-
-
-function c(a, b) {
-    return a**b;
+// 2
+function checkMultiplicity(a, b){
+    return a % b === 0;
 }
-let result = c(2, 2);
-console.log(result);
+console.log(checkMultiplicity(25, 5));
+console.log(checkMultiplicity(15, 3));
+console.log(checkMultiplicity(15, 5));
+console.log(checkMultiplicity(15, 4));
 
-let result1 = c(3, 4);
-console.log(result1);
-
-function sumAll(a, b){
-    let sum = 0;
-    for(let i = a; i <= b; i++ ){
-      sum += i;  
-    }
-    return sum;
+//3
+function isTriangle(a, b, c) {
+    return a + b > c || a + c > b || b + c > a && (a > 0, b > 0, c > 0);
 }
-console.log(sumAll(7,10));
+console.log(isTriangle(2, 2, 3)); 
 
+//повинна виконуватись ще умова більшої сторони, але я незнаю як її прописати.
+//Багото і або
 
-function isAge(age){
-    if(age >= 18) {
-         return true;
-    } else {
-        return false;
-    }
+// 4
+function s(a, b = a){
+    return a * b;
+} 
+console.log(s(2,3));
+console.log(s(4));
+
+// 5
+function lightNumber(a){
+    return (a % a === 0 && a % 2 === 1);
 }
-
-function isAge(age){
-    return age >= 18 ? true: false;
-}
-
-console.log(isAge(16));
-console.log(isAge(18));
-console.log(isAge(25));
-
-
-function isAge(age){
-    return age >= 18;
-}
-console.log(isAge(20));
-
-let c = function(a, b) {
-    return a**b;
-}
-console.log(c(2, 2));
-*/
-
-/**
- * Calc sum of all given numbers
- * @param {number} d - first number
- * @param {number} [c = 1] - second number
- * @returns sum all number
- */
-
-function sumAll(d, c = 1) {
-    let sum = 0;
-    for(let i = c; i <= d; i++ ){
-      sum += i;  
-    }
-    return sum;
-}
-console.log(sumAll(5));
-console.log(sumAll(5, 1));
-
-/**
- * Calc sum of two numbers
- * @param {number} a - first number
- * @param {number} b - second number
- * @returns sum two numbers
- */
-function sum(a, b) {
-    return a + b;
-}
-let result = sum (7, 13);
-console.log(result);
-
+console.log(lightNumber(+prompt('введіть число')));
