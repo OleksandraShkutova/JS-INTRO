@@ -1,118 +1,106 @@
-
-/*let user = {
-    firstName: 'Vika',
-    lastName: 'Lyn',
-    age: 7,
-}
-console.log('Object', user);
-
-let userName = user.firstName;
-console.log(userName);
-
-
-let car = {
-    brend: 'Mercedes-Benz',
-    model: 'SLS AMG',
-    made: 2023,
-    number: 'BK1313ZE',
-    color: 'grafit',
-    //вкладені обєкти
-    param: {
-        height: 1.2,
-        weight: 2.0,
-    } 
-    ,
-    //функція
-    changeColor(newColor){
-        this.color = newColor;
-    },
-}
-
-car.changeColor('red');
-console.log('User car:', car);
-
-
-
 /*
-//змінюємо
-car.color = 'blue';
-console.log('User car:', car);
+//об'єкт customer
+let customer = {
+    firstName: 'Lie',
+    lastName: 'Kim',
+    email: 'lieKim@gmail.com',
+    password: 12345678,
+    tell: '80123456789',
+    //метод 2
+    getChangeTell: function(newTell){
+        this.tell = newTell;
+    },
+    adress: {
+        city: 'Funchal',
+        street: 'Casa Branca',
+        nb: 98,
+    },
+    //мутод 1
+    getFullAdress: function(){
+        return `Adress: ${this.adress.city}, ${this.adress.street}, ${this.adress.nb}`;
+    }
+}
 
-//видаляємо
-delete car.model;
-console.log('User car:', car);
+console.log('customer', customer);
 
-//додаємо
-car.user = 'Sasha Sonce';
-console.log('User car:', car);
+//метод 1
+let fullAdress = customer.getFullAdress();
+console.log(fullAdress);
 
-//переглядаємо зі змінами
-console.log('User car:', car);
+//метод 2
+customer.getChangeTell = String(prompt('введіть новий номер телефона'));
+ 
+//додати властивість
+customer.isMale = true;
 
+//видалити властивість
+delete customer.adress;
 
 //копіювання
-let car2 = Object.assign({}, car);
-car2.color = 'white',
-console.log('car2', car2);
+let customer2 = Object.assign({}, customer);
+console.log('customer2:',customer2);
 
-let car3 = {...car};
-car3.color = 'black',
-console.log('car3', car3);
+let customer3 = {...customer};
+console.log('customer3:', customer3);
 
-console.log(car === car2);
-console.log(car === car3);
-
-
-for(let key in car){
-    console.log(`car: ${key} = ${car[key]}`);
-}
-
-//перегляд обєкта
-console.dir(car);
-
-//перегляд функції як обєкта
-console.dir(function a(b,c){});
-
-
-
-const car1 = {
-	brand: 'Volkswagen',
+//Перебрати і вивести властивості обєкта
+let user = {
+    name: 'Murka',
+    color: 'black',
+    isMale: false,
+    isFurnitureDemage: true,
 };
 
-const car2 = {
-	brand: 'Volkswagen',
-};
-
-console.log(car1 === car2);
+ for (kay in user){
+    console.log(kay, '-', user[kay]);
+ };
 */
 
-function UserCar(brend, model, made, number,color){
-    this.brend = brend;
-    this.model = model;
-    this.made = made;
-    this.number = number;
-    this.color = color;
+ //Функція-конструктор
+function Book(autor, bookTitle, publication, publishHouse, prise, ageOfBook){
+    this.autor = autor;
+    this.bookTitle = bookTitle;
+    this.publication = publication;
+    this.publishHouse = publishHouse;
+    this.prise = prise;
+    //ввела зміннe, щоб побачити як працює метод
+    this.ageOfBook = ageOfBook;
 }
 
-//задаємо обєкт    
-let carProto = {};
+/*let bookProto = {};
+bookProto.changePrise = function (newPrise) {
+    this.prise = newPrise;
+};
+Book.prototype = bookProto;
+*/
+Book.prototype.changePrise = function (newPrise) {
+    this.prise = newPrise;
+};
 
-//прописуємо метод в створений обєкт
-carProto.changeNumber = function(newNumber){
-    this.number = newNumber;
+Book.prototype.oldBook = function(yearNow){
+    this.ageOfBook = yearNow - this.publication;
 }
 
-//призначаємо створений обєкт в властивість prototype функції-конструктора
-UserCar.prototype = carProto;
+let book1 = new Book('Дженіфер Л. Арментраут', 'Війна двох королев', 2023, 'КСД', 370, 1); 
+console.log('book1:', book1);
+
+let book2 = new Book('Дженіфер Л. Арментраут', 'Із крові і попелу', 2023, 'КСД', 330, 1);
+console.log('book2',book2);
+
+book1.changePrise(400);
+book1.oldBook(2025);
 
 
-let userCar1 = new UserCar('Mercedes-Benz', 'SLS AMG', 2023, 'BK1313ZE', 'grafit');
-console.log(userCar1);
 
-let userCar2 = new UserCar('Audi', 'Q6', 2014, 'BK0101ZE', 'red');
-console.log(userCar2);
 
-UserCar.prototype.changeNumber = prompt('введіть номер авто');
+
+
+
+
+
+
+
+
 
 
 
