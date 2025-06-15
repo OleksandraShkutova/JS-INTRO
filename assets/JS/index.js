@@ -1,4 +1,4 @@
-/*
+
 //об'єкт customer
 let customer = {
     firstName: 'Lie',
@@ -28,8 +28,10 @@ let fullAdress = customer.getFullAdress();
 console.log(fullAdress);
 
 //метод 2
-customer.getChangeTell = String(prompt('введіть новий номер телефона'));
- 
+customer.getChangeTell = prompt('введіть новий номер телефона');
+console.log('obg customer, change tell:', customer);
+
+/*
 //додати властивість
 customer.isMale = true;
 
@@ -54,7 +56,7 @@ let user = {
  for (kay in user){
     console.log(kay, '-', user[kay]);
  };
-*/
+
 
  //Функція-конструктор
 function Book(autor, bookTitle, publication, publishHouse, prise, ageOfBook){
@@ -72,7 +74,7 @@ bookProto.changePrise = function (newPrise) {
     this.prise = newPrise;
 };
 Book.prototype = bookProto;
-*/
+
 Book.prototype.changePrise = function (newPrise) {
     this.prise = newPrise;
 };
@@ -89,7 +91,7 @@ console.log('book2',book2);
 
 book1.changePrise(400);
 book1.oldBook(2025);
-
+*/
 
 
 

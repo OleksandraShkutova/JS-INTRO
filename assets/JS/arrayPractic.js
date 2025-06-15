@@ -1,5 +1,5 @@
 
-//Phone: brand, model, color, isNfc, price
+/Phone: brand, model, color, isNfc, price
 
 function Phone (id, brand, model, madeYear, color, isNfc, price) {
     this.id = id;
