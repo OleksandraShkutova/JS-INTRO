@@ -1,5 +1,5 @@
 
-/Phone: brand, model, color, isNfc, price
+Phone: brand, model, color, isNfc, price
 
 function Phone (id, brand, model, madeYear, color, isNfc, price) {
     this.id = id;
@@ -55,7 +55,7 @@ let foundIndex = phones.findIndex(p => p.id === 7);
 console.log('index id7', foundIndex);
 
 if (foundIndex !== -1) {
-    phones.slice(foundIndex, 1);
+    phones.splice(foundIndex, 1);
 }
 
 // 5. Отримати масив з телефонами, ціна яких нижча на 5% від вихідної
