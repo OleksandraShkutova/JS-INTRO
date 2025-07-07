@@ -1,4 +1,4 @@
-
+/*
 Phone: brand, model, color, isNfc, price
 
 function Phone (id, brand, model, madeYear, color, isNfc, price) {
@@ -77,4 +77,32 @@ console.table(discountPrise);
 phones
     .filter(p => p.isNfc)
     .forEach(p => console.log(`Brand: ${p.brand} model: ${p.model}`))
+*/
 
+//Рядки як асевдомасиви
+
+let str = 'qwerT'
+console.log('str = qwerT:', str.length);
+console.log(str[2]);
+
+const str1 = str.slice(0, 5) + 'ww';
+console.log('str1 = qwerTww:', str1);
+
+console.log(str.startsWith('qw'));
+console.log(str1.endsWith('t'));
+console.log(str.includes('ww'));
+console.log(str.toUpperCase());
+console.log(str.toLowerCase());
+console.log(str.indexOf('q'));
+
+// Vika Lyn => VL
+
+function getUserName (userName) {
+    const spaceIndex = userName.indexOf(' ');
+    return (userName[0] + userName.slice(spaceIndex + 1, spaceIndex + 2)).toUpperCase();
+};
+
+const initials = getUserName('vika lyn');
+console.log(initials);
+
+console.log(spaceIndex);
