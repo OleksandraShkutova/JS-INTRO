@@ -17,7 +17,7 @@ try {
 // Homework 2-09
 function validateEmail (email){
     if (email[0] === '@' || email.length - 1 === '@') {
-        throw new SyntaxError('incorrect email')
+        throw new RangeError('incorrect email')
     }
     return email;
 }
