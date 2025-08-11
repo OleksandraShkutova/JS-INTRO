@@ -98,7 +98,7 @@ class Phone{
 const myPhone = new Phone ('Redmi', 'Note 12', 'black', 6000, 2022);
 console.log('My phone:', myPhone);
 console.log('Old my phone:', myPhone.calcOldPhone());
-*/
+
 
 //Деструктуроване присвоєння змінна = влстивість обєкта чи пасиву
 
@@ -186,3 +186,127 @@ console.log('restparameters:', restAttr);
 const {name, ... restUser3} = user3;
 console.log(name);
 console.log(restUser3);
+*/
+
+//Принципи ОПП:
+//Інкапсуляція
+
+class User {
+    constructor (fullName, age, email) {
+        [this._firstName, this._lastName] = fullName.split(' ');
+        this._age = age;
+        this._email = email;
+        this._isBanned = false;
+    }
+    set fullName(value) {
+        [this._firstName, this._lastName] = value.split(' ');
+    }
+    get fullName() {
+        return this._firstName + ' ' + this._lastName;
+    }
+};
+const user11 = new User('Vika Lyn', 21, 'vika@ukr.net', )
+console.log('user11:', user11);
+user11.fullName = 'Maks Lyn';
+console.log(user11);
+console.log(user11.fullName);
+
+//Спадкування
+
+class Moderator extends User {
+    constructor (fullName, age, email, permissions) {
+        super(fullName, age, email);
+        this._permissions = permissions;
+    }
+    sendMessage(user, message){
+        console.log(
+            `Moderator ${this._firstName} send message "${message}" to ${user._firstName}`
+        );
+    }
+}
+
+const moderator = new Moderator('Mod Moderatovych', 30, 'mod@ukr.net', {
+    bann: false,
+    readPrivat: false,
+    sendMessage: true,
+});
+
+console.log(moderator.fullName);
+moderator.sendMessage(user11, 'Hello!');
+console.log('Moderator:', moderator);
+
+//практика Admin з методом, що банить чи ні користувачів
+
+class Admin extends Moderator {
+    constructor (fullName, age, email, permissions, categori) {
+        super(fullName, age, email, permissions);
+        this._categori = categori;
+    }
+    bann (user) {
+        user._isBanned = true;
+        console.log(`Admin ${this._firstName} banned user ${user._firstName}`);
+    }
+    unBann (user) {
+        user._isBanned = false;
+        console.log(`Admin ${this._firstName} unbanned user ${user._firstName}`);
+    }
+}
+
+const admin = new Admin('Andriy Adminovych', 28, 'admin@ukr.net', {
+    bann: true,
+    readPrivat: true,
+    sendMessage: true,
+}, 'unior'
+);
+console.log('Admin:', admin);
+console.log(admin.fullName);
+console.log('user11.isBanned:', user11._isBanned);
+admin.bann(user11);
+console.log(user11._isBanned);
+admin.unBann(user11);
+console.log(user11._isBanned);
+
+//Поліморфізм
+
+class Figure {
+    constructor (name) {
+        this._name = name;
+    }
+    getAria() {
+        return null;
+    }
+}
+
+class Square extends Figure {
+    constructor (sideLength) {
+        super ('square');
+        this._l = sideLength;
+    }
+    getAria (){
+        return this._l * this._l;
+    }
+}
+
+const square1 = new Square (5);
+console.log(square1.getAria());
+
+class Rectangle extends Figure {
+    constructor (sideLength, sideWidth) {
+        super ('rectangle');
+        this._l = sideLength;
+        this._w = sideWidth;
+    }
+    getAria (){
+        return this._l * this._w;
+    }
+}
+
+const rectangle1 = new Rectangle (10, 2);
+console.log(rectangle1.getAria());
+
+ function calcAria (fig){
+    if (fig instanceof Figure){
+       return fig.getAria();
+    }
+    console.log('fig is not Figure'); 
+ }
